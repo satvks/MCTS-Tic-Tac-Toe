@@ -1,0 +1,6 @@
+README
+
+Satvik Srinivasan
+Ben Tingely
+
+Modified changes explore_factions depending on a win or loss to greedily seek more wins.

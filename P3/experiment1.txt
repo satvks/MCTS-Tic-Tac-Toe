@@ -1,0 +1,27 @@
+experiment1.txt
+
+Player 1 and 2 have 100 node trees.
+Final win counts: {'draw': 11, 1: 44, 2: 45}
+329.479796259  seconds
+Across 100 games, they are very evenly matched.
+
+Player 1 100 and 2 500 nodes:
+Final win counts: {'draw': 9, 1: 18, 2: 73}
+867.724920042  seconds
+
+The 500 node player won significantly more times than Player 1 this time around.
+
+Player 1 100 and 2 750 nodes:
+Final win counts: {'draw': 11, 1: 12, 2: 77}
+1209.0149628719998  seconds
+
+It takes significantly more time, and in this trial, Player 2 only won 4 more games than the trial bot that 
+used 500 nodes. That said it had fewer losses.
+
+
+Player 1 100 and 2 1000 nodes:
+Final win counts: {'draw': 2, 1: 8, 2: 90}
+1521.527413536  seconds
+
+The 100 node bot (Player 1) didn't stand a CHANCE against Player 2. Surprisingly avoiding more draws than
+losses, Player 1 seems like it had no defensive strategy, making it more likely to seek a win than a draw.

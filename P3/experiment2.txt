@@ -1,0 +1,35 @@
+experiment2.txt
+
+Modified increases or decreases explore_faction, making the algorithm greedily seek out win states, and avoid
+losing conditions
+
+1: Player 1 and 2 have 700 nodes, Player 2 is modified
+Final win counts: {'draw': 2, 1: 7, 2: 91}
+1089.270933051  seconds
+
+1.5: Tested again:
+Final win counts: {'draw': 8, 1: 7, 2: 85}
+1248.48819739  seconds
+Somehow I Randomly picked the perfect combo between tree size and explore_faction
+magnitude, that my first experiment ran Extremely well!!
+
+
+2: Player 1 and 2 have 500 nodes, Player 2 is modified
+Final win counts: {'draw': 11, 1: 62, 2: 27}
+1463.426114262  seconds
+Because explore_faction increases greatly, the tree size makes larger steps. That is to
+say, the "winning" cases chased after, aren't diverse enough, making modified brash and
+overconfident.
+
+3: Player 1 and 2 have 1000 node, Player 2 is modified
+Final win counts: {'draw': 17, 1: 47, 2: 36}
+2755.987507239  seconds
+It seems this has a similar problem as from trial 2, only the factor value is a little
+more closely suited
+
+4: Player 1 and 2 have 500 node, Player 2 is modified. Modified delta explore_faction reduced from:
+ +/- .25 to .1
+Final win counts: {'draw': 10, 1: 54, 2: 36}
+1490.034798737  seconds
+Wins a little more often. This indicates, the smaller number of nodes, the lesser the changing magnitude for
+explore_factor should change. There may be a good way to compute this, but for now, we hardcode this.
