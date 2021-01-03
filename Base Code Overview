@@ -1,0 +1,21 @@
+Base Code Overview
+p3_sim.py
+A multiple-game simulator useful for running repeated rounds between pairs of bots. 
+To change which bots are active in either the graphical or tournament versions of the game, pass 
+different command-line arguments.  (python p3_sim.py botname1 botname2)
+
+p3_play.py
+An interactive version of the game. Bots are given as above (python p3_play.py botname1 botname2).
+
+mcts_vanilla.py and mcts_modified.py
+Versions of monte carlo tree search written by me.
+
+Supplied example bots:
+random_bot.py → selects a random action every turn
+rollout_bot.py → for every possible move from the immediate state, this bot 
+samples x games (played randomly) and returns the move with the highest expected turnout
+	
+
+NOTES: Adversarial planning – the bot will be simulating both players’ turns. This 
+requires you to alter the UCT function (during the tree traversal/selection phase) on the 
+opponent’s turn. Remember: the opponent’s win rate (Xj) = (1 – bot’s win rate).
